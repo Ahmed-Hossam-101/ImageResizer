@@ -1,0 +1,24 @@
+
+{
+  "compilerOptions": {
+      "target": "esnext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+      "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["jasmine"],
+    "rootDir": "./backend",  // Changed from "./backend/src"
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["./backend/src/*"],
+      "@spec/*": ["./backend/spec/*"]
+    }
+  },
+  "include": [
+    "backend/src/**/*",
+    "backend/spec/**/*"
+  ]
+}

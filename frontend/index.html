@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Image Editor</title>
+</head>
+<body>
+  <div class="container">
+<h3>Upload an Image</h3>
+
+<form action="http://localhost:3000/uploadImg" method="POST" id="form" enctype="multipart/form-data">
+  <input type="file" id="filename" name="image" data-filename="88" accept=".jpg" required>
+  <button type="submit">Upload an Image</button>
+</form>
+<h3>Choose Image to resize</h3>
+<div id="select">
+
+</div>
+<h3>Set Hight and Width</h3>
+
+    <div class="axis">
+      <input type="number" min="10" max="500" placeholder="width" id="width">
+      <input type="number" min="10" max="500" placeholder="height" id="height">
+    </div>
+    <button id="resizeBtn">Resize Image</button>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
