@@ -7,7 +7,10 @@ const __filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(__filename);
 const originalsImagesDir = path.join(dirname, '../../imgs/originals');
 const resizedImagesDir = path.join(dirname, '../../imgs/resized');
-
+if (resizedImagesDir && !fs.existsSync(resizedImagesDir)) {
+  fs.mkdirSync(resizedImagesDir, { recursive: true });
+  
+}
 const createImg = async (
   filename: string,
   width: number,
